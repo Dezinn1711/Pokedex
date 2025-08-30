@@ -36,4 +36,11 @@ public class Pokemon
     [Required(ErrorMessage ="Por favor, informe o peso")]
     public string Peso { get; set; }
 
+    [StringLength(200)]
+    public string Imagem { get; set; }
+
+    [StringLength(400)]
+    public string Animacao { get; set; }
+
+    public ICollection<PokemonTipo> Tipos { get; set; }
 }
